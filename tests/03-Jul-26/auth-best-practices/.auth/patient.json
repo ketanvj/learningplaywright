@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://localhost:5173",
+      "localStorage": [
+        {
+          "name": "healthhub_token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImp0aSI6ImRjMTE3NzJlLTJjMTQtNGQyOS04MGQ5LTBjZWQxNDI4YTQ2YiIsImlhdCI6MTc4Mjk5OTIwNiwiZXhwIjoxNzgzMDg1NjA2fQ.XPKchSkmgr6i5LLd-fcGcWcXlmWv-oMMYDnbHXJS4j8"
+        }
+      ]
+    }
+  ]
+}

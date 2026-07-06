@@ -1,0 +1,4 @@
+title,type,date,time,duration,provider,location
+CSV Checkup Alpha,general,2028-03-01,09:00,30,Dr. CSV Test,City Clinic
+CSV Checkup Beta,physical,2028-03-02,10:00,60,Dr. CSV Test,Main Hospital
+CSV Checkup Gamma,followup,2028-03-03,11:00,30,Dr. CSV Test,West Wing

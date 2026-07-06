@@ -1,0 +1,20 @@
+[
+  {
+    "name": "valid patient credentials",
+    "email": "patient@healthhub.test",
+    "password": "Test123!",
+    "shouldSucceed": true
+  },
+  {
+    "name": "wrong password",
+    "email": "patient@healthhub.test",
+    "password": "BadPassword99",
+    "shouldSucceed": false
+  },
+  {
+    "name": "unknown email",
+    "email": "ghost@nowhere.test",
+    "password": "Test123!",
+    "shouldSucceed": false
+  }
+]
