@@ -1,0 +1,9 @@
+{
+  "name": "Local Dev Machine",
+  "type": "local",
+  "buildOrder": 1,
+  "buildName": "Instructor Demo Run",
+  "buildUrl": "http://localhost",
+  "reportUrl": "http://localhost/allure-report",
+  "reportName": "HealthHub Allure Report"
+}

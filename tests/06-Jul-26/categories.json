@@ -1,0 +1,31 @@
+[
+  {
+    "name": "UI Assertion Failures",
+    "description": "A Playwright expect() assertion did not match reality — almost always a real product/UI bug, not a test defect. Matches any 'expect(...).toXxx(...) failed' message, regardless of which matcher was used.",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*expect\\(.*\\).*failed.*"
+  },
+  {
+    "name": "Test / Suite Timeouts",
+    "description": "The whole test exceeded its configured timeout (test.setTimeout / testTimeout config). Usually means a step got stuck waiting on something that never happened — investigate the last step that ran. This is the only scenario Allure reports as 'broken' rather than 'failed'.",
+    "matchedStatuses": ["broken"],
+    "messageRegex": ".*[Tt]est timeout of.*exceeded.*"
+  },
+  {
+    "name": "Element Not Found / Locator Timeouts",
+    "description": "A locator action (click/fill/waitFor/etc.) timed out waiting for an element to appear — reported by Playwright as a normal 'failed' test, not 'broken'. Usually a bad selector, a timing race, or a broken environment — the single most common real-world failure signature in large suites. Anchored on the 'TimeoutError:' prefix so it doesn't also catch expect()-based assertion timeouts (see UI Assertion Failures).",
+    "matchedStatuses": ["failed"],
+    "messageRegex": "TimeoutError:.*"
+  },
+  {
+    "name": "API / Network Failures",
+    "description": "Backend unreachable, DNS failure, connection reset, or a 5xx response — reported as 'failed', not 'broken'. Points at infrastructure/environment rather than the test or the feature itself.",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*(ECONNREFUSED|ECONNRESET|fetch failed|getaddrinfo|50[0-9] ).*"
+  },
+  {
+    "name": "Ignored Tests",
+    "description": "Explicitly skipped via test.skip(). Usually a disabled feature flag, a known/tracked issue, or an environment limitation — not a failure at all.",
+    "matchedStatuses": ["skipped"]
+  }
+]
